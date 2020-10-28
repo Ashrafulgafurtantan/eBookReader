@@ -1,4 +1,5 @@
 import 'package:ebook_reader/constants.dart';
+import 'package:ebook_reader/screens/home_screen.dart';
 import 'package:ebook_reader/widgets/rounded_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,9 @@ class Welcome extends StatelessWidget {
               ]
             ),
             ),
-            RoundedButton(text: "Start reading",press: ()=>print("Tap..."),
+            RoundedButton(text: "Start reading",press: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+            },
               width: MediaQuery.of(context).size.width*0.6,fontSize: 20,)
           ],
         )
